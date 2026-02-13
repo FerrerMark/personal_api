@@ -10,7 +10,7 @@ const dataRoutes = require('./src/routes/dataRoutes');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://personal-api-ftdn.onrender.com',
+  origin: 'https://portfolio-ferrerjohnmark26-gmailcoms-projects.vercel.app',
   methods: ['GET','POST'],
   allowedHeaders: ['Content-Type']
 };
