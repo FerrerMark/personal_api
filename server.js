@@ -5,11 +5,12 @@ const path = require('path');
 
 const aiRoutes = require('./src/routes/aiRoutes');
 const errorHandler = require('./src/middleware/errorHandler');
+const dataRoutes = require('./src/routes/dataRoutes');
 
 const app = express();
 
 const corsOptions = {
-  origin: 'https://portfolio-ferrerjohnmark26-gmailcoms-projects.vercel.app',
+  origin: 'https://personal-api-ftdn.onrender.com',
   methods: ['GET','POST'],
   allowedHeaders: ['Content-Type']
 };
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/ai', aiRoutes);
+app.use('/api/data', dataRoutes);
 
 app.use(errorHandler);
 
