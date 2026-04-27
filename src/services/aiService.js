@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const getAIResponse = async (question) => {
   const API_KEY = process.env.GOOGLE_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(API_KEY)}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${encodeURIComponent(API_KEY)}`;
 
   try {
     const { data } = await axios.post(
